@@ -27,4 +27,5 @@ function App() {
   );
 }
 
+console.log(`Welcome to the Application`);
 export default App;
