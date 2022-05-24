@@ -26,7 +26,13 @@ const Cart = (props) => {
   };
 
   const cartItemAddHandler = (item) => {
-    cartCtx.addItem(item);
+    // cartCtx.addItem(item);
+    cartCtx.addItem({
+      id: item.id,
+      name: item.name,
+      amount: 1,
+      price: item.price,
+    });
   };
 
   const OrderHandler = () => {
@@ -34,9 +40,6 @@ const Cart = (props) => {
   };
 
   const submitOrderHandler = (userDetails) => {
-    console.log(userDetails);
-    console.log(cartCtx.items);
-
     sendOrderRequest(
       {
         url: "https://react-4013a-default-rtdb.firebaseio.com/orders.json",
