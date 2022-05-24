@@ -27,4 +27,5 @@ function App() {
   );
 }
 
+console.log("New Feature Added");
 export default App;
